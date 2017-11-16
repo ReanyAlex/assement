@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var minifyCSS = require('gulp-csso');
 var uglify = require('gulp-uglify');
 var pump = require('pump');
+var imagemin = require('gulp-imagemin');
 var watch = require('gulp-watch');
 var browserSync = require('browser-sync').create();
 
@@ -22,15 +23,28 @@ gulp.task('scripts', function(cb) {
   pump([gulp.src('app/scripts/*.js'), uglify(), gulp.dest('docs/scripts')], cb);
 });
 
-gulp.task('copyAssetsFile', function() {
-  return gulp.src('app/assets/**/*').pipe(gulp.dest('./docs/assets'));
+gulp.task('copyFonts', function() {
+  return gulp.src('app/assets/fonts/*').pipe(gulp.dest('./docs/assets/fonts'));
 });
 
 gulp.task('copyHtml', function() {
   return gulp.src('app/index.html').pipe(gulp.dest('./docs'));
 });
 
-gulp.task('build', ['css', 'scripts', 'copyAssetsFile', 'copyHtml']);
+gulp.task('optimizeImages', function() {
+  return gulp
+    .src(['./app/assets/images/*'])
+    .pipe(
+      imagemin({
+        progressive: true,
+        interlaced: true,
+        multipass: true
+      })
+    )
+    .pipe(gulp.dest('./docs/assets/images'));
+});
+
+gulp.task('build', ['css', 'scripts', 'copyFonts', 'copyHtml', 'optimizeImages']);
 
 // ----------
 
