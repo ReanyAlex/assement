@@ -1,0 +1,36 @@
+.footer {
+  max-width: 1428px;
+  position: relative;
+  margin: auto !important;
+  height: 110px;
+  background-image: url('../assets/images/geometric-band.jpg');
+  background-size: cover;
+
+  &-pagination {
+    text-align: center;
+    top: 40px;
+    position: relative;
+    margin: auto;
+    display: block;
+
+    @include lg {
+      top: 55px;
+    }
+
+    &-link {
+      color: $customWhite;
+      font-size: 2rem;
+      text-decoration: none;
+      font-family: 'SourceSansPro-Light', sans-serif;
+      padding: 0 0.125rem;
+
+      @include md {
+        font-size: 2.5rem;
+      }
+
+      @include lg {
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'SourceSansPro-Light';
+  src: url('../assets/fonts/SourceSansPro-Light.ttf');
+}
+
+@font-face {
+  font-family: 'SourceSansPro';
+  src: url('../assets/fonts/SourceSansPro-Regular.ttf');
+}
+
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+$darkFont: #0f0f0f;
+$customWhite: #fff;
+$customRed: #ee4023;
+
+html {
+  min-width: 300px;
+}
+
+body {
+  max-width: 1428px;
+  position: relative;
+  margin: auto !important;
+  display: block;
+  background-color: rgb(254, 255, 255);
+  border: none;
+  box-shadow: 0 0 0 1px #e3e4e5, 0 0 0 2px #ebeced, 0 0 0 3px #f2f3f4, 0 0 0 4px #f6f7f8, 0 0 0 5px #fafbfc;
+}
+
+.float-right {
+  float: none;
+
+  @include lg {
+    float: right;
+  }
+}
+
+.float-left {
+  float: none;
+
+  @include lg {
+    float: none;
+  }
+}

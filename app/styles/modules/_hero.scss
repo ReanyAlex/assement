@@ -1,0 +1,70 @@
+.hero {
+  width: 100%;
+
+  &-img {
+    width: 100%;
+
+    &-text {
+      color: $customWhite;
+      font-size: 1.5rem;
+      position: absolute;
+      top: 1%;
+      left: 6%;
+      width: 30%;
+      font-family: 'SourceSansPro-Light';
+
+      @include md {
+        font-size: 3rem;
+        top: 1.5%;
+        width: 30%;
+      }
+
+      @include lg {
+        font-size: 42px;
+        top: 1.5%;
+        width: 36%;
+      }
+    }
+  }
+
+  &-tagline {
+    text-align: center;
+    color: $darkFont;
+    padding-bottom: 30px;
+
+    @include md {
+      padding-bottom: 70px;
+    }
+
+    &-header {
+      font-size: 4rem;
+      font-family: 'SourceSansPro-Light', sans-serif;
+
+      @include md {
+        font-size: 5rem;
+      }
+
+      @include lg {
+        font-size: 48px;
+      }
+    }
+
+    &-text {
+      font-size: 2rem;
+      width: 80%;
+      padding-left: 20%;
+      font-family: 'SourceSansPro-Light', sans-serif;
+      margin-top: 0;
+
+      @include md {
+        font-size: 2rem;
+      }
+
+      @include lg {
+        width: 100%;
+        padding-left: 0;
+        font-size: 24px;
+      }
+    }
+  }
+}

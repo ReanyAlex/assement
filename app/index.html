@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Moments Editing Software</title>
+  </head>
+  <body>
+
+      <header>
+        <div class="hero">
+          <img class="hero-img" src="./assets/images/hero.jpg" alt="mother and daughter taking a photo">
+          <h2 class="hero-img-text">Turn your videos & pictures into a movie with just one click</h2>
+        </div>
+        <div class="hero-tagline">
+          <header class="hero-tagline-header">Tell Amazing Stories</header>
+          <p class="hero-tagline-text">Editing software that brings your videos and pictures together in one movie.</p>
+        </div>
+      </header>
+
+      <section class="content">
+          <article  class="content-article">
+            <div id='flip' class="content-article-img-div">
+              <img class="content-article-img-div-img" src="./assets/images/computer1.jpg" alt="to represent a video of a group riding bicycles ">
+            </div>
+            <div  class="content-article-desc float-right">
+              <h3 class="content-article-desc-header">Customize Your Moments </h3>
+              <p class="content-article-desc-text">Bacon ipsum dolor amet laborum drumstick andouille cupim shoulder commodo t-bone ex minim pork loin velit. Aliquip fatback fugiat proident aliqua culpa cillum minim jerky meatloaf. Drumstick kevin et velit boudin nisi ea salami culpa ad. </p>
+              <button class='content-article-desc-button' type="button" name="button" onclick="flip()">flip</button>
+            </div>
+          </article>
+
+          <article  class="content-article">
+            <div class="content-article-img-div float-right">
+              <img id='change' class="content-article-img-div-img"  src="./assets/images/computer2.jpg" alt="showing the editing software crop and zoom tools with a photo of a couple taking a selfie">
+            </div>
+
+            <div class="content-article-desc">
+              <h3 class="content-article-desc-header">Autometic Crop & Zoom</h3>
+              <p class="content-article-desc-text"> Meatball ut deserunt ad beef ribs. Anim spare ribs kevin mollit. Ut ham hock mollit, leberkas irure ex lorem corned beef reprehen derit. Corned beef beef ribs turducken sausage short ribs in, cupidatat culpa. T-bone bacon sausage, boudin et occaecat fatback ball tip cupim. </p>
+              <button class='content-article-desc-button' type="button" name="button" onclick="newImg()">change</button>
+            </div>
+
+          </article>
+      </section>
+
+      <div>
+        <section class="closing">
+          <img class="closing-image" src="./assets/images/closing-photo.jpg" alt="photo of woman and child infront of a scenic mountain">
+          <div class="closing-trial-box">
+            <h4 class="closing-trial-box-header">Free Trail. No credit card. No Hassle.</h4>
+            <p class="closing-trial-box-text">Just enter your email address below and begin capturing moments.</p>
+            <form class="closing-trial-box-form">
+              <input class="closing-trial-box-form-input" type="text" name="" value="Enter your email address">
+              <button class="closing-trial-box-form-button" type="button" name="button">START FREE TRIAL</button>
+            </form>
+          </div>
+        </section>
+      </div>
+
+
+    <footer class="footer navbar navbar-default navbar-bottom">
+      <p class="footer-pagination">
+        <a class="footer-pagination-link" href="#">Sitemap | </a>
+        <a class="footer-pagination-link" href="#">Legal   </a>
+        <a  class="footer-pagination-link"href="#">| Blog</a>
+      </p>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
