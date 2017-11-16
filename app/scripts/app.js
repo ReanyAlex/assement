@@ -18,6 +18,6 @@ function newImg() {
 
   // Tenary expression to check which src to and insert the correct srx
   element.src === 'http://localhost:3000/assets/images/computer2.jpg'
-    ? (element.src = './assets/images/computer2b.jpg')
-    : (element.src = './assets/images/computer2.jpg');
+    ? (element.src = 'assets/images/computer2b.jpg')
+    : (element.src = 'assets/images/computer2.jpg');
 }
